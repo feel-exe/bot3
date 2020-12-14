@@ -14,14 +14,15 @@ dp = Dispatcher(bot)  # кусок от aiogram
 
 @dp.message_handler(commands=["start"])
 async def process_start_command(message: types.Message):
-    print(message)
-    #await bot.send_message(message.from_user.id,'Привет, у меня собраны решения подготовительных заданий ОГЭ и ЕГЭ по физике\nЧтобы начать, просто пришли мне формулировку задачи')
-    mess = Assistant_bot()
-    messa = mess.start
-    print(type(messa))
-    await bot.send_message(message.from_user.id,messa)
+    await bot.send_message(message.from_user.id,Assistant_bot().start())
 
+@dp.message_handler(commands=["help"])
+async def process_help_command(message: types.Message):
+    await bot.send_message(message.from_user.id, Assistant_bot().help())
 
+@dp.message_handler(commands=["donations"])
+async def process_donations_command(message: types.Message):
+    await bot.send_message(message.from_user.id, "Тут можно поддержать проект", parse_mode="Markdown")
 
 
 
