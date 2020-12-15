@@ -11,6 +11,41 @@ bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)  # кусок от aiogram
 
 
+# Функции
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @dp.message_handler(commands=["start"])
 async def process_start_command(message: types.Message):
