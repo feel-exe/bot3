@@ -55,11 +55,12 @@ async def uploadMediaFiles(folder, method, file_attr):
 loop = asyncio.get_event_loop()
 
 tasks = [
-    loop.create_task(uploadMediaFiles('pics', bot.send_photo, 'photo')),
-    loop.create_task(uploadMediaFiles('videos', bot.send_video, 'video')),
-    loop.create_task(uploadMediaFiles('videoNotes', bot.send_video_note, 'video_note')),
-    loop.create_task(uploadMediaFiles('files', bot.send_document, 'document')),
-    loop.create_task(uploadMediaFiles('ogg', bot.send_voice, 'voice')),
+    #loop.create_task(uploadMediaFiles('pics', bot.send_photo, 'photo')),
+    loop.create_task(uploadMediaFiles('pdf', bot.send_document, 'pdf')),
+    #loop.create_task(uploadMediaFiles('videos', bot.send_video, 'video')),
+    #loop.create_task(uploadMediaFiles('videoNotes', bot.send_video_note, 'video_note')),
+    #loop.create_task(uploadMediaFiles('files', bot.send_document, 'document')),
+    #loop.create_task(uploadMediaFiles('ogg', bot.send_voice, 'voice')),
 ]
 
 wait_tasks = asyncio.wait(tasks)

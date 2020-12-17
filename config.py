@@ -12,3 +12,5 @@ nrpp = 3 # number_of_responses_per_page количество ответов на
 MY_ID = 77777
 
 DB_FILENAME = 'botuploads.db'
+
+DB_FILENAME_BOT = 'SolTask.db'
